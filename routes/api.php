@@ -23,6 +23,8 @@ Route::get('/user', function (Request $request) {
 
 //registrar
 Route::post('/eventos/registrar', [EventosController::class, 'registrar']);
+Route::post('/eventos/detalle{id}', [EventosController::class, 'detalle']);
+
 
 //para mostrar en pantalla
 Route::get('/eventos/listar', [EventosController::class, 'listado']);

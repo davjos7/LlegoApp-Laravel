@@ -17,6 +17,11 @@ class EventosController extends Controller
          $eventos = Evento::get();
          return json_encode($eventos);
      }
+
+     function detalle($id) {
+        $evento = Evento::find($id);
+        return json_encode($evento);
+    }
     // aca actualizas al gato
      function actualizar($id, Request $request){
          $datos = $request->all();
