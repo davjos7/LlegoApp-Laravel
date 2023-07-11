@@ -10,7 +10,7 @@ class EventosController extends Controller
     function registrar (Request $request) {
         $datos = $request->all();
         Evento::create($datos); //aca va el modelo,
-        echo "Se inserto correctamente";
+        echo 1;
     }
 
      function listado() {
@@ -33,6 +33,6 @@ class EventosController extends Controller
      function eliminar($id){
          $eventos = Evento::find($id);
         $eventos->delete();
-        echo 'Se mató correctamente';
+        echo 1;
     }
 }
